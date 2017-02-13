@@ -39,7 +39,7 @@ while True:
     print('HTTP request received:')
     print(recvSocket.recv(1024))
     htmlAnswer = answer()
-    recvSocket.send(bytes("HTTP/1.1 200 OK\r\n\r\n" +
+    recvSocket.send(bytes("HTTP/1.1 404 ERROR\r\n\r\n" +
                     str(htmlAnswer) +
                     "\r\n", 'utf-8'))
     recvSocket.close()
